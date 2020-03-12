@@ -1,0 +1,6 @@
+$GetData = (type .\licence.dat -TotalCount 3)[-1]
+$GetData.Substring(35,13)
+
+(Get-Content .\licence.dat -TotalCount 3)[-1] -replace '^.+?\b(\d{2}-[a-z]{3}-\d{4})\b.+$', '$1'
+
+https://stackoverflow.com/questions/60646390/read-file-line-by-line-in-powershell-taking-a-single-string
